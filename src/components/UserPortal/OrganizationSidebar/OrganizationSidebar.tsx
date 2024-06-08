@@ -27,8 +27,8 @@ export default function organizationSidebar(): JSX.Element {
   const { orgId: organizationId } = useParams();
   const [members, setMembers] = React.useState([]);
   const [events, setEvents] = React.useState([]);
-  const eventsLink = `/user/events/id=${organizationId}`;
-  const peopleLink = `/user/people/id=${organizationId}`;
+  const eventsLink = `/user/events/${organizationId}`;
+  const peopleLink = `/user/people/${organizationId}`;
 
   const { data: memberData, loading: memberLoading } = useQuery(
     ORGANIZATIONS_MEMBER_CONNECTION_LIST,
